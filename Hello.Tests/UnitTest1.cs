@@ -6,6 +6,8 @@ namespace Hello.Tests
     public class UnitTest1
     {
         [Fact]
+        // Yes, this is a comment
+        // Another comment
         public void Test1()
         {
             //Arrange
@@ -15,7 +17,7 @@ namespace Hello.Tests
             Program.Main(new String[0]);
             var output = writer.GetStringBuilder().ToString().Trim();
             //Assert
-            Assert.Equal("Hello, World!", output);
+            Assert.Equal("Hello, sweet World!", output);
         }
     }
 }
