@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hello\Hello.csproj" />
+    <ProjectReference Include="..\LeapYear\LeapYear.csproj" />
   </ItemGroup>
 
 </Project>
