@@ -48,5 +48,12 @@ namespace Hello.Tests
             //Assert
             Assert.Equal("nay", actual);
         }
+
+        [Fact]
+        public void should_return_formatException(){
+            
+            //Arrange & Act & Assert
+            Assert.Throws<FormatException>(() => Program_Leap.readInput("din far"));
+    }
     }
 }

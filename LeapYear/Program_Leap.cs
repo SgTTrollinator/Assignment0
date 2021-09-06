@@ -8,7 +8,11 @@ namespace LeapYear
         {
             Console.WriteLine("Insert year: ");
             String year = Console.ReadLine();
+            try{
             Console.WriteLine(readInput(year));
+            }catch(FormatException e){
+                Console.WriteLine("Please write a number because this exceptions is thrown " + e);
+            }
         }
 
         public static bool isLeapYear(int year){
@@ -20,7 +24,10 @@ namespace LeapYear
         }
 
         public static string readInput(string year){
-            int actualYear = Int32.Parse(year);
+            int actualYear;
+           
+            actualYear = Int32.Parse(year);
+            
             if(isLeapYear(actualYear) == true){
                 return "yay";
             }else{
