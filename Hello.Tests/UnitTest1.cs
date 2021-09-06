@@ -36,7 +36,6 @@ namespace Hello.Tests
             
             //Assert
             Assert.Equal("yay", output);
-
         }
     }
 }
