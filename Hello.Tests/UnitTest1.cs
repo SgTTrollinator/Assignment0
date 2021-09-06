@@ -22,20 +22,31 @@ namespace Hello.Tests
         }
         
         [Fact]
-        public void is_leap_year_test(){
+        public void should_return_true(){
             //Arrange
-            var input = new StringReader("2000");
+
+            /*var input = new StringReader("2000");
             Console.SetIn(input);
             var writer = new StringWriter();
-            Console.SetOut(writer);
+            Console.SetOut(writer);*/
 
             //Act 
-            Program_Leap.Main(new string[1]{input.ToString()});
-            String output = writer.GetStringBuilder().ToString().Trim();
+            string actual = Program_Leap.readInput("2000");
+            //String output = writer.GetStringBuilder().ToString().Trim();
 
             
             //Assert
-            Assert.Equal("yay", output);
+            Assert.Equal("yay", actual);
+        }
+
+        [Fact]
+        public void should_return_false(){
+
+            //Arrange & Act
+            string actual = Program_Leap.readInput("2001");
+
+            //Assert
+            Assert.Equal("nay", actual);
         }
     }
 }
